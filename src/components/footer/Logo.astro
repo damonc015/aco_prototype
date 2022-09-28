@@ -1,0 +1,49 @@
+---
+interface Props {
+  className: string;
+  imgLink: string;
+  imgSrc: string;
+  imgTitle: string;
+  imgAlt: string;
+}
+const {
+  className = null,
+  imgLink = null,
+  imgSrc = null,
+  imgTitle = null,
+  imgAlt = "an image",
+} = Astro.props;
+---
+
+<div class:list={["logo", className]}>
+  <a href={imgLink}><img src={imgSrc} title={imgTitle} alt={imgAlt} /></a>
+</div>
+
+<style>
+  .logo {
+    display: inline-block;
+    margin: 0 30px 30px;
+    line-height: 1;
+    width: auto;
+    height: 40px;
+  }
+  a {
+    color: #3f3492;
+    text-decoration: none;
+  }
+
+  a {
+    background: transparent;
+  }
+  .logo img {
+    width: auto;
+    height: 100%;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+  img {
+    border: 0;
+  }
+</style>

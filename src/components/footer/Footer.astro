@@ -1,0 +1,212 @@
+---
+import Logo from "./Logo.astro";
+---
+
+<footer class="footer-main container-fluid" role="contentinfo">
+  <div class="feedback">
+    <div dir="rtl">
+      <a
+        href="https://nyu.qualtrics.com/jfe/form/SV_7X5LdFZDVpnj88J?Q_Language=AR"
+        class="external"
+        target="_blank">أسئلة؟ طلبات؟ الرجاء اعلامنا</a
+      >
+    </div>
+    <div dir="ltr">
+      <a
+        href="https://nyu.qualtrics.com/jfe/form/SV_7X5LdFZDVpnj88J?Q_Language=EN"
+        class="external"
+        target="_blank">Questions? Requests? Please let us know.</a
+      >
+    </div>
+  </div>
+  <div class="logo-hold">
+    <Logo
+      className="nyu"
+      imgLink="http://www.nyu.edu/"
+      imgSrc="/footer-logos/nyu_short_color.png"
+      imgTitle="New York University"
+      imgAlt="New York University"
+    />
+    <Logo
+      className="nyuad"
+      imgLink="http://www.nyu.edu/"
+      imgSrc="/footer-logos/nyuad.png"
+      imgTitle="New York University"
+      imgAlt="New York University"
+    />
+    <Logo
+      className="columbia"
+      imgLink="http://www.columbia.edu/"
+      imgSrc="/footer-logos/columbia.png"
+      imgTitle="Columbia University in the City of New York"
+      imgAlt="Columbia University in the City of New York"
+    />
+    <Logo
+      className="cornell"
+      imgLink="http://www.cornell.edu/"
+      imgSrc="/footer-logos/cornell.png"
+      imgTitle="Cornell University"
+      imgAlt="Cornell University"
+    />
+    <Logo
+      className="princeton"
+      imgLink="https://www.princeton.edu/"
+      imgSrc="/footer-logos/princeton.png"
+      imgTitle="Princeton University"
+      imgAlt="Princeton University"
+    />
+    <Logo
+      className="aub"
+      imgLink="http://www.aub.edu.lb/"
+      imgSrc="/footer-logos/aub.png"
+      imgTitle="American University of Beirut"
+      imgAlt="American University of Beirut"
+    />
+    <Logo
+      className="auc"
+      imgLink="http://www.aucegypt.edu/"
+      imgSrc="/footer-logos/auc.png"
+      imgTitle="The American University in Cairo"
+      imgAlt="The American University in Cairo"
+    />
+    <Logo
+      className="uae"
+      imgLink="http://www.na.ae/"
+      imgSrc="/footer-logos/uae.png"
+      imgTitle="United Arab Emirates National Archives"
+      imgAlt="United Arab Emirates National Archives"
+    />
+    <Logo
+      className="qnl"
+      imgLink="https://www.qnl.qa/"
+      imgSrc="/footer-logos/qnl.png"
+      imgTitle="Qatar National Library"
+      imgAlt="Qatar National Library"
+    />
+  </div>
+  <div class="credits">
+    <div class="creditshold">
+      <div>
+        <a
+          class="external"
+          href="https://www.nyu.edu/footer/accessibility.html"
+          target="_blank">Accessibility</a
+        >
+      </div>
+      <div>
+        Powered by: <a
+          href="http://dlib.nyu.edu/dlts/"
+          class="external"
+          target="_blank">Digital Library Technology Services, NYU Libraries</a
+        >
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  @media (min-width: 768px) {
+    .container-fluid {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  .container-fluid {
+    width: 100%;
+    max-width: 1090px;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin: 0px auto;
+    overflow: hidden;
+  }
+  .footer-main.container-fluid {
+    margin: 90px auto 40px;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .footer-main.container-fluid .feedback {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9em;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 35px 0;
+    box-shadow: 0px 1px 0px 0px #ffffff;
+    border-bottom: 1px solid #deccbf;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    margin-bottom: 35px;
+  }
+  .footer-main.container-fluid .feedback > [dir="rtl"] {
+    text-align: right;
+    padding-left: 20px;
+  }
+
+  .footer-main.container-fluid .feedback > div {
+    flex: 1 1 auto;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-main.container-fluid .feedback > [dir="ltr"] {
+    text-align: left;
+    padding-right: 20px;
+  }
+
+  .footer-main.container-fluid .feedback > div {
+    flex: 1 1 auto;
+    margin-bottom: 0.5rem;
+  }
+
+  [dir="rtl"] .external {
+    padding-right: 0;
+    padding-left: 1.3em;
+    background: url(/aco/images/External_rtl.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1em;
+  }
+
+  .external {
+    padding-right: 1.2em;
+    display: inline;
+    background: url(/aco/images/External.svg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 1em;
+    padding-bottom: 1px;
+  }
+  a {
+    color: #3f3492;
+    text-decoration: none;
+  }
+  a {
+    background: transparent;
+  }
+
+  .footer-main.container-fluid .logo-hold {
+    margin: 0 auto;
+  }
+  .footer-main.container-fluid .credits {
+    text-transform: uppercase;
+    font-family: "Times New Roman", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9em;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding-top: 35px;
+    letter-spacing: 1px;
+    text-align: center;
+    box-shadow: 0px -1px 0px 0px #deccbf;
+    border-top: 1px solid #ffffff;
+  }
+  .footer-main.container-fluid .creditshold {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+</style>
