@@ -1,25 +1,19 @@
 ---
-const showMenu = true;
+let showMenu = true;
+const setShowMenu = () => {
+  console.log(showMenu)
+  if (showMenu == true) {
+    return (showMenu = false);
+  }
+  return (showMenu = true);
+};
 ---
 
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <!-- <button
-        type="button"
-        class="navbar-toggle collapsed widget"
-        data-toggle="collapse"
-        aria-label="Toggle Navigation"
-        data-name="navButton"
-        data-script="{ "
-        js"
-        :
-        [
-        "navButton.min.js"
-        ]
-        }"
-      >
+    <!-- <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed widget" onclick="setShowMenu">
         <svg
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -33,10 +27,10 @@ const showMenu = true;
           <rect y="8" fill="#FFFFFF" width="18" height="3"></rect>
           <rect y="13" fill="#FFFFFF" width="18" height="3"></rect>
         </svg>
-      </button><script src="/aco/js/navButton.min.js"></script> -->
-    </div>
+      </button>
+    </div> -->
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="navbar-collapse">
+    <!-- <div class="navbar-collapse"> -->
       <ul class="nav navbar-nav">
         <li><a href="/aco/" class="front.js">Home</a></li>
         <li><a href="/aco/about/" class="about.js">About</a></li>
@@ -57,7 +51,7 @@ const showMenu = true;
       </ul>
     </div>
     <!-- /.navbar-collapse -->
-  </div>
+  <!-- </div> -->
   <!-- /.container-fluid -->
 </nav>
 
@@ -106,7 +100,7 @@ const showMenu = true;
     box-sizing: border-box;
   }
 
-  /* @media (min-width: 768px) {
+  @media (min-width: 768px) {
     .navbar-collapse {
       width: auto;
       height: auto;
@@ -125,22 +119,8 @@ const showMenu = true;
     -webkit-overflow-scrolling: touch;
     height: 0;
     overflow-y: hidden;
-  } */
-  
-  @media (min-width: 768px) {
-    .container-fluid {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
   }
-  .container-fluid {
-    width: 100%;
-    max-width: 1090px;
-    padding-left: 4%;
-    padding-right: 4%;
-    margin: 0px auto;
-    overflow: hidden;
-  }
+
   @media (min-width: 768px) {
     .navbar-header {
       float: left;
