@@ -60,7 +60,7 @@
     border-radius: 3px;
     overflow: visible;
     background-color: #f7f5f2;
-    background: #f7f5f2 url(/aco/images/arrowdown.gif) no-repeat 95% 50%;
+    background: #f7f5f2 url(/arrowdown.gif) no-repeat 95% 50%;
 }
 [role="search"].advanced div.fieldset div.select-style select {
     width: 100%;
@@ -132,7 +132,7 @@ option {
     padding: 5px 25px;
     border: 1px solid #DECCBF;
     border-radius: 3px;
-    background: #DECCBF url(/aco/images/search-icon-2x.png) no-repeat center center;
+    background: #DECCBF url(/search-icon-2x.png) no-repeat center center;
     background-size: auto 80%;
     text-indent: -1000em;
     border: 1px solid #DECCBF;

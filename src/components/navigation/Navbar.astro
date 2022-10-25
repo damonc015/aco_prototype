@@ -1,19 +1,11 @@
 ---
-let showMenu = true;
-const setShowMenu = () => {
-  console.log(showMenu)
-  if (showMenu == true) {
-    return (showMenu = false);
-  }
-  return (showMenu = true);
-};
 ---
 
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <!-- <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed widget" onclick="setShowMenu">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed widget">
         <svg
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -28,9 +20,9 @@ const setShowMenu = () => {
           <rect y="13" fill="#FFFFFF" width="18" height="3"></rect>
         </svg>
       </button>
-    </div> -->
+    </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <!-- <div class="navbar-collapse"> -->
+    <div class="navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a href="/aco/" class="front.js">Home</a></li>
         <li><a href="/aco/about/" class="about.js">About</a></li>
@@ -51,143 +43,8 @@ const setShowMenu = () => {
       </ul>
     </div>
     <!-- /.navbar-collapse -->
-  <!-- </div> -->
+  </div>
   <!-- /.container-fluid -->
 </nav>
 
-<style>
-  nav.navbar.navbar-default {
-    box-shadow: 0px 2px 3px rgb(10 10 10 / 30%);
-  }
 
-  .navbar-default {
-    background-color: #27205a;
-  }
-  .navbar {
-    position: relative;
-    min-height: 50px;
-  }
-  @media (min-width: 768px) {
-    nav.navbar.navbar-default {
-      border-top: 1px solid #0f0c22;
-      margin-top: 0;
-    }
-  }
-  .navbar-header:before,
-  .navbar-header:after {
-    content: " ";
-    display: table;
-  }
-
-  *:before,
-  *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .navbar-header:after {
-    clear: both;
-  }
-  .navbar-header:before,
-  .navbar-header:after {
-    content: " ";
-    display: table;
-  }
-  *:before,
-  *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-  @media (min-width: 768px) {
-    .navbar-collapse {
-      width: auto;
-      height: auto;
-      padding-top: 10px;
-      overflow-y: visible;
-    }
-  }
-
-  .navbar-collapse {
-    overflow-x: visible;
-    padding-right: 0;
-    padding-left: 0;
-    border-top: 1px solid transparent;
-    box-shadow: inset 0 1px 0 rgb(255 255 255 / 10%);
-    box-shadow: 0px 3px 3px rgb(110 102 93 / 30%);
-    -webkit-overflow-scrolling: touch;
-    height: 0;
-    overflow-y: hidden;
-  }
-
-  @media (min-width: 768px) {
-    .navbar-header {
-      float: left;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .navbar-nav {
-      float: left;
-      margin: 0 0 10px 0;
-    }
-  }
-  .navbar-nav {
-    margin: 7.5px 0 0;
-  }
-  .nav {
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style: none;
-  }
-  @media (min-width: 768px) {
-    .navbar-nav > li {
-      float: left;
-    }
-  }
-
-  .nav > li {
-    position: relative;
-    display: block;
-    color: #cbcace;
-  }
-
-  @media (min-width: 768px) {
-    nav.navbar.navbar-default .nav > li:first-child > a {
-      padding-left: 0;
-    }
-  }
-
-  @media (min-width: 768px) {
-    nav.navbar.navbar-default li > a {
-      font-size: 0.85em;
-    }
-  }
-  nav.navbar.navbar-default li > a {
-    font-size: 1rem;
-    line-height: 1.5;
-    font-weight: 400;
-    font-style: normal;
-    transition: all 0.3s;
-  }
-  @media (min-width: 768px) {
-    .navbar-nav > li > a {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-  }
-  .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    line-height: 20px;
-  }
-  .nav > li > a {
-    position: relative;
-    display: block;
-    color: #cbcace;
-    padding: 10px 25px;
-  }
-</style>

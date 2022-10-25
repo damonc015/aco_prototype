@@ -1,0 +1,185 @@
+---
+export interface Props {
+  label: any;
+  iass_author: any;
+  sm_field_publisher: any;
+  url: string;
+}
+const { label, iass_author, sm_field_publisher, url } = Astro.props;
+---
+
+<div class="flexrow item">
+  <div class="flexcol" lang="en" dir="ltr">
+    <div class="meta" lang="en" dir="ltr">
+      <div class="md_title">
+        <a href="/aco/book/princeton_aco000320/1">{label}</a>
+      </div>
+      <div class="md_author">
+        <span class="md_label">Author:</span>
+
+        <span class="one_author"
+          ><a
+            class="md_author"
+            href="/aco/search/?author=Nuʻaymah, Mīkhāʼīl, 1889-1988"
+            >{iass_author}
+          </a>
+        </span>
+      </div>
+      <div class="md_category">
+        <span class="md_label">Category:</span>
+
+        <span class="one_category"
+          ><a
+            class="md_category"
+            href="/aco/search?category=Language and Literature&scope=matches"
+            >Language and Literature</a
+          >
+        </span>
+      </div>
+      <div class="md_publisher">
+        <span class="md_label">Publisher:</span>
+        <span
+          ><a
+            class="md_publisher"
+            href="/aco/search/?publisher=Maṭbaʻat Lisān al-Ḥāl"
+            >{sm_field_publisher}</a
+          >
+        </span>
+      </div>
+      <div class="md_pubplace">
+        <span class="md_label">Place of Publication:</span>
+        <span class="publoc">
+          <a class="md_pubplace" href="/aco/search/?pubplace=Bayrūt">Bayrūt</a>
+        </span>
+      </div>
+      <div class="md_pubdate">
+        <span class="md_label">Date of Publication:</span>
+        <span class="pubdate">1934</span>
+      </div>
+      <div class="md_subjects">
+        <span class="md_label">Subjects:</span>
+        <span class="one_subject"
+          ><a
+            class="md_subject"
+            href="/aco/search/?subject=Gibran, Kahlil -- 1883-1931"
+            >Gibran, Kahlil -- 1883-1931</a
+          >
+        </span>
+      </div>
+      <div class="md_partner">
+        <span class="md_label">Provider:</span>
+        <a
+          class="md_provider"
+          data-code="princeton"
+          data-id="1"
+          href="/aco/search/?provider=Princeton University Libraries"
+          >Princeton University Libraries</a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="thumbholder flexcol">
+    <div class="thumbs">
+      <div class="read-online">
+        <a class="read-online" href={url} target="_blank">
+          <div lang="ar" class="ar_callout" dir="rtl">شاهِد فوراً</div>
+          <div dir="ltr" lang="en">Read Online</div>
+        </a>
+      </div>
+      <div class="download-pdfs">
+        <div class="download-pdf-button">
+          <a
+            class="pdf-button"
+            href="http://mc.dlib.nyu.edu/files/books/princeton_aco000320/princeton_aco000320_lo.pdf"
+          >
+            <div dir="rtl" lang="ar">تحميل دِقّة منخفضة</div>
+            <div dir="ltr" lang="en">
+              Low-resolution PDF
+              <span class="fs">(23.4 MB)</span>
+            </div>
+          </a>
+          <a
+            class="pdf-button"
+            href="http://mc.dlib.nyu.edu/files/books/princeton_aco000320/princeton_aco000320_hi.pdf"
+          >
+            <div dir="rtl" lang="ar">تحميل دِقّة عالية</div>
+            <div dir="ltr" lang="en">
+              High-resolution PDF
+              <span class="fs">(151.4 MB)</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flexcol" lang="ar" dir="rtl">
+    <div class="meta" lang="ar" dir="rtl">
+      <div class="md_title" dir="rtl" lang="ar">
+        <span
+          ><a href="/aco/book/princeton_aco000320/1?lang=ar"
+            >جبران خليل جبران :</a
+          >
+        </span>
+      </div>
+      <div class="md_authors">
+        <span class="md_label">الكاتب:</span>
+
+        <span class="one_author"
+          ><a
+            class="md_author"
+            href="/aco/search/?author=نعيمة، ميخائيل،, 1889-1988"
+            >نعيمة، ميخائيل،, 1889-1988</a
+          >
+        </span>
+      </div>
+      <div class="md_category">
+        <span class="md_label">فئة الموضوع:</span>
+
+        <span class="one_category"
+          ><a
+            class="md_category"
+            href="/aco/search?category=اللغات والآداب&scope=matches"
+            >اللغات والآداب</a
+          >
+        </span>
+      </div>
+      <div class="md_publisher">
+        <span class="md_label">الناشر:</span>
+
+        <a class="md_publisher" href="/aco/search/?publisher=مطبعة لسان الحال،"
+          ><span>مطبعة لسان الحال،</span>
+        </a>
+      </div>
+      <div class="md_publocation">
+        <span class="md_label">مكان النشر:</span>
+
+        <a class="md_pubplace" href="/aco/search/?pubplace=بيروت :"
+          ><span>بيروت :</span>
+        </a>
+      </div>
+      <div class="md_pubdate">
+        <span class="md_label">تاريخ النشر:</span>
+
+        <span dir="ltr" lang="en">1934</span>
+      </div>
+      <div class="md_download-pdfs dl-hi-res" dir="rtl" lang="ar">
+        <span class="md_label">تحميل الكتاب (پي دي اف):</span>
+        <a
+          class="md_download-pdfs-link"
+          href="http://mc.dlib.nyu.edu/files/books/princeton_aco000320/princeton_aco000320_hi.pdf"
+          ><span>دِقّة عالية</span>
+          <span>(151.4 MB)</span>
+        </a>
+      </div>
+      <div class="md_download-pdfs dl-low-res" dir="rtl" lang="ar">
+        <span class="md_label">تحميل الكتاب (پي دي اف):</span>
+        <a
+          class="md_download-pdfs-link"
+          href="http://mc.dlib.nyu.edu/files/books/princeton_aco000320/princeton_aco000320_lo.pdf"
+          ><span>دِقّة منخفضة</span>
+          <span>(23.4 MB)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

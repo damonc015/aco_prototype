@@ -1,8 +1,11 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import Select from "./Select";
 import Input from "./Input";
+import "../../../styles/sass/style.css";
 
 const Formmenu = () => {
+  const [field, setField] = useState("");
+
   const selectField = useRef([
     { value: "q", display: "Any Field / أي مُصطلح" },
     { value: "title", display: "Title / العنوان" },
@@ -44,9 +47,9 @@ const Formmenu = () => {
             ariatype="Boolean Operator"
             choices={selectScope.current}
           />
-          <Input />
+          <Input placeholder={field}/>
           <div className="submit-hold">
-            <input type="submit" className="submit-search"/>
+            <input type="submit" className="submit-search" />
           </div>
         </div>
       </form>

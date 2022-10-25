@@ -1,8 +1,11 @@
 ---
 import Acolayout from "../../layouts/Acolayout.astro";
 import Formmenu from "../../components/forms/Formmenu";
+import Display from "../../components/content/Display.astro";
+import Test from "../../components/forms/Test";
 ---
 
 <Acolayout title="Arabic Collections Online">
   <Formmenu />
+  <Display client:media="(max-width: 400px)" />
 </Acolayout>

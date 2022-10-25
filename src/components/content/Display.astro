@@ -1,0 +1,57 @@
+---
+import Bookitem from "./Bookitem.astro";
+
+const response = await fetch(
+  "https://sites.dlib.nyu.edu/viewer/api/v1/search?fl=label,iass_author,sm_field_publisher,url&fq=sm_collection_label:%22Arabic%20Collections%20Online%22"
+);
+const data = await response.json();
+---
+<main class="container-fluid">
+<div class="col col-l" lang="en" dir="ltr">
+  <p>
+    <b>Arabic Collections Online</b> (ACO) is a publicly available digital library
+    of public domain Arabic language content. ACO currently provides digital access
+    to <b>17,694</b> volumes across
+    <b>10,468</b> subjects drawn from rich Arabic collections of distinguished research
+    libraries. Established with support from NYU Abu Dhabi, and currently supported
+    by major grants from Arcadia, a charitable fund of Lisbet Rausing and Peter Baldwin,
+    and Carnegie Corporation of New York, this mass digitization project aims to
+    feature up to 23,000 volumes from the library collections of NYU and partner
+    institutions.&nbsp;
+    <a
+      href="/aco/about/"
+      aria-label="read more about Arabic Collections Online"
+      class="readmore">READ&nbsp;MORE…</a
+    >
+  </p>
+</div>
+<div class="col col-r" lang="ar" dir="rtl">
+  <p>
+    <b>المجموعات العربية على الانترنِت</b> هي عبارة عن مكتبة عامة رقميَّة للكتب المؤلَّفة
+    باللغة العربية والتي أصبحت في المجال العام. حالياً، هذا المشروع يوفّر إمكانيّة
+    الولوج الإلكتروني إلى <b>{data.numFound}</b>
+    كتاباً في اكثر من <b>10,468</b> موضوعاً مُستَمداً من مجموعات قيّمة في مكتبات
+    مميَّزة. تأسست بدعم من جامعة نيويورك أبوظبي وتدعمها حاليًا المنح الكبرى من أركاديا
+    ، وهي صندوق خيري لشركة ليسبت راوزينج وبيتر بالدوين ، وشركة كارنيجي في نيويورك.
+    يهدف مشروع الرقمنة هذا إلى عرض ما يصل إلى 23,000 مجلد من مجموعات مكتبة جامعة
+    نيويورك والمؤسسات الشريكة.&nbsp;
+    <a
+      aria-label="read more about Arabic Collections Online"
+      href="/aco/about/"
+      class="readmore">المزيد...</a>
+  </p>
+</div>
+<div class="featured">
+  <div class="flexrow header">
+    <h2 dir="ltr" lang="en" class="itemhomeCol flexcol">Featured Titles</h2>
+    <h2 dir="rtl" lang="ar" class="itemhomeCol flexcol">
+      من العناوين المعروضة
+    </h2>
+  </div>
+  {
+    data.docs.map((item: any) => {
+      return <Bookitem label={item.label} iass_author={item.iass_author} sm_field_publisher={item.sm_field_publisher} url={item.url}/>;
+    })
+  }
+</div>
+</main>
